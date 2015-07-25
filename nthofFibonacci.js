@@ -6,11 +6,15 @@ var findNum = function(n) {
   var fib = [0, 1];
   var num;
 
+  if (n <= 1) {
+    return n;
+  }
+
   while (fib.length <= n) {
     fib.push(fib[fib.length - 1] + fib[fib.length - 2]);
   }
 
   num = fib[n - 1];
-  
+
   return num;
 }
